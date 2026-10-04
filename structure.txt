@@ -1,0 +1,24 @@
+text2pdf/
+├── .github/
+│   └── workflows/
+│       ├── ci.yml                  # runs tests on every push/PR
+│       └── deploy.yml              # publishes the site to GitHub Pages
+├── site/                           # everything that gets deployed
+│   ├── index.html                  # home: "Paste Text" / "Upload File"
+│   ├── editor.html                 # 80-column editor + Generate PDF
+│   ├── upload.html                 # single-file upload
+│   ├── assets/
+│   │   ├── css/style.css
+│   │   └── js/
+│   │       ├── pyodide-loader.js   # loads Pyodide + the Python module
+│   │       ├── editor.js
+│   │       └── upload.js
+│   ├── py/
+│   │   └── text2pdf.py             # the converter (fetched by Pyodide at runtime)
+│   └── .nojekyll
+├── tests/
+│   └── test_text2pdf.py            # pytest, imports site/py/text2pdf.py
+├── requirements-dev.txt            # pytest, fpdf2 (for local tests)
+├── .gitignore
+├── LICENSE
+└── README.md
