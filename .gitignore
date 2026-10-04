@@ -1,1 +1,4 @@
-project-structure.txt
+.venv/
+__pycache__/
+.pytest_cache/
+out.pdf
